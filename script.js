@@ -134,3 +134,41 @@
 // } else {
 //     console.log("Quente")
 // }
+
+
+
+//parte 5
+// let n = Number(prompt("Informe um número de 1 a 9:"))
+
+// for (let i = 0; i <= 10; i++){
+//     console.log(`${n} x ${i} = ${n*i}`)
+// }
+
+
+
+// let escolhapc = "pedra"
+
+// for (let i = 0; i < 3; i++) {
+//     let escolhauser = String(prompt("escolha entre: (pedra / papel / tesoura)"))
+//     if (escolhauser === "pedra") {
+//         console.log("Empate")
+//     } else if (escolhauser === "papel") {
+//         console.log("Vitoria")
+//     } else if (escolhauser === "tesoura") {
+//         console.log("Perdeu")
+//     } else {
+//         console.log("Não entendi")
+//     }
+// }
+
+
+
+let n = Number(prompt("Informe um número:"))
+
+for (let i = 1; i < n + 1; i++) {
+    let fat = n
+    alert("Fatorial = " + fat)
+    fat = fat * (n - i);
+}
+
+alert(n + "! = " + fat);

@@ -235,3 +235,19 @@
 //     }
 //     alert(`O fatorial de ${n} é ${fat}`)
 // }
+
+
+
+// ex4
+// let n = Number(prompt("Informe um número para calcular o fatorial: "))
+
+// if (n < 0) {
+//     alert("O número não pode ser negativo!")
+// } else {
+//     let fat = 1
+
+//     for (let i = 1; i <= n; i++) {
+//         fat *= i
+//     }
+//     alert(`O fatorial de ${n} é ${fat}`)
+// }

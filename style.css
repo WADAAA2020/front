@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primaria: #26667F;
+    --secundaria: #124170;
+    --texto: #DDF4E7;
+    --github: #000000;
+    --linkedin: #1B58DD;
+    --copyright: #67C090;
+}
+
+.nav {
+    background-color: var(--secundaria);
+    display: flex;
+    padding: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--texto);
+    padding-left: 40px;
+}
+
+body {
+    background: var(--primaria);
+}
+
+.box {
+    max-width: 500px;
+    border: 2px solid #2D2D2D;
+    padding: 40px 30px;
+    margin: 20px;
+    background: var(--secundaria);
+    border-radius: 25px;
+    box-shadow: 8px 8px 0 #2D2D2D, 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 0 #2D2D2D, 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.box p {
+    font-size: 20px;
+    font-style: normal;
+    color: var(--texto);
+    text-align: center;
+    line-height: 1.5;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contatos {
+    align-items: center;
+}
+
+.footer {
+    background-color: var(--secundaria);
+    color: var(--texto);
+    text-align: center;
+    padding: 45px;
+}

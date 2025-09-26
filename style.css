@@ -7,8 +7,6 @@
     --primaria: #26667F;
     --secundaria: #124170;
     --texto: #DDF4E7;
-    --github: #000000;
-    --linkedin: #1B58DD;
     --copyright: #67C090;
 }
 
@@ -16,6 +14,7 @@
     background-color: var(--secundaria);
     display: flex;
     padding: 40px;
+    margin-bottom: 40px;
 }
 
 .nav a {
@@ -29,10 +28,11 @@ body {
 }
 
 .box {
+    display: flex;
     max-width: 500px;
     border: 2px solid #2D2D2D;
     padding: 40px 30px;
-    margin: 20px;
+    margin: 0 auto;
     background: var(--secundaria);
     border-radius: 25px;
     box-shadow: 8px 8px 0 #2D2D2D, 0 0 20px rgba(0, 0, 0, 0.3);
@@ -48,26 +48,31 @@ body {
     font-size: 20px;
     font-style: normal;
     color: var(--texto);
-    text-align: center;
+    text-align: justify;
     line-height: 1.5;   
 }
 
+.container {
+    background-color: var(--secundaria);
+    margin: 40px;
+    
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#contatos {
+.icons {
+    display: flex;
     align-items: center;
+    gap: 0.2em;
+    justify-content: center;
+}
+
+.icons i {
+    color: var(--texto);
+    padding: 15px;
+    height: 50%;
+}
+
+figure i{
+    font-size: 40px;
 }
 
 .footer {

@@ -49,13 +49,13 @@ body {
     font-style: normal;
     color: var(--texto);
     text-align: justify;
-    line-height: 1.5;   
+    line-height: 1.5;
 }
 
 .container {
     background-color: var(--secundaria);
     margin: 40px;
-    
+
 }
 
 .icons {
@@ -71,7 +71,7 @@ body {
     height: 50%;
 }
 
-figure i{
+figure i {
     font-size: 40px;
 }
 

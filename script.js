@@ -95,7 +95,7 @@ function calcularMedia() {
     }
 
 
-    let media = (n1 + n2 + n3) / 3
+    let media = (n1 + n2 + n3) / 3;
 
     alert(`A média é ${media.toFixed(1)}`);
 }
@@ -108,18 +108,21 @@ function quantidadeTinta() {
     let altura = Number(prompt("Informe a altura da parede:"));
 
     if (isNaN(largura) || isNaN(altura)) {
-        alert("Por favor, informe um número.");
-    } else (altura && largura < 0) {
-        alert("Informe números positivos.");
+        alert("Por favor, informe números válidos.");
+        return;
+    } else if (largura <= 0 || altura <= 0) {
+        alert("Por favor, informe números positivos.");
+        return;
     }
 
-    let area = largura * altura
-    let tinta = area / 2
+    let area = largura * altura;
+    let tinta = area / 2;
 
     alert(`Serão necessários ${tinta} litros de tinta para pintar a parede.`);
 }
 
 document.getElementById("lista2_ex3").addEventListener("click", quantidadeTinta);
+
 
 
 function verDiferenca() {
@@ -130,7 +133,7 @@ function verDiferenca() {
         alert("Por favor, informe números válidos!");
     }
 
-    let diferenca
+    let diferenca;
 
     if (n1 > n2) {
         diferenca = n1 - n2
@@ -184,7 +187,7 @@ function verArea() {
         alert("Por favor, informe números válidos!");
     }
 
-    let area = base * altura
+    let area = base * altura;
 
     alert(`A área é ${area}`);
 }
@@ -244,7 +247,7 @@ function checkNumero() {
     }
 }
 
-document.getElementById("lista3_ex3").addEventListener("clickd", checkNumero);
+document.getElementById("lista3_ex3").addEventListener("click", checkNumero);
 
 
 function checkSenha() {
@@ -290,7 +293,7 @@ function tabuada() {
     }
 
     for (let i = 0; i <= 10; i++) {
-        alert(`${n} x ${i} = ${n * i}`)
+        alert(`${n} x ${i} = ${n * i}`);
     }
 }
 

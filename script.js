@@ -1,3 +1,6 @@
+
+
+
 function perguntarNome() {
     let nome = prompt("Qual é o seu nome?");
 
@@ -291,6 +294,7 @@ function notaMediaPar() {
 
     if (isNaN(n1) || isNaN(n2)) {
         alert("Por favor, informe número válido!");
+        return;
     }
 
     let media = (n1 + n2) / 2;
@@ -302,7 +306,7 @@ function notaMediaPar() {
     }
 
 
-    if (media % 2 === 0) {
+    if (Number.isInteger(media) && media % 2 === 0) {
         alert("A média é par");
     }
 }
@@ -311,33 +315,39 @@ document.getElementById("lista4_ex1").addEventListener("click", notaMediaPar);
 
 
 function imc() {
-    let peso = parseFloat(prompt("Informe o seu peso:"));
-    let altura = parseFloat(prompt("Informe a sua altura:"));
+    let peso = Number(prompt("Informe o seu peso (em kg):"));
+    let altura = Number(prompt("Informe a sua altura (em metros):"));
 
-    if (isNaN(n1) || isNaN(n2)) {
-        alert("Por favor, informe número válido!");
+    if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+        alert("Por favor, informe valores numéricos válidos e maiores que zero!");
+        return;
     }
 
-    let imc = peso / (altura + altura);
+    let imc = peso / (altura * altura);
+    let classificacao = "";
 
     if (imc < 16) {
-        alert("Magreza Grave");
+        classificacao = "Magreza Grave";
     } else if (imc >= 16 && imc < 17) {
-        alert("Magreza Moderada");
+        classificacao = "Magreza Moderada";
     } else if (imc >= 17 && imc < 18.5) {
-        alert("Magreza Leve");
+        classificacao = "Magreza Leve";
     } else if (imc >= 18.5 && imc < 25) {
-        alert("Saudável");
+        classificacao = "Saudável";
     } else if (imc >= 25 && imc < 30) {
-        alert("Sobrepeso");
+        classificacao = "Sobrepeso";
     } else if (imc >= 30 && imc < 35) {
-        alert("Obesidade Grau |");
+        classificacao = "Obesidade Grau I";
     } else if (imc >= 35 && imc < 40) {
-        alert("Obesidade Grau ||");
+        classificacao = "Obesidade Grau II";
     } else {
-        alert("Obesidade Grau |||");
+        classificacao = "Obesidade Grau III";
     }
+
+    alert(`Seu IMC é ${imc.toFixed(2)} - ${classificacao}`);
 }
+
+document.getElementById("lista4_ex2").addEventListener("click", imc);
 
 
 function bissexto() {
@@ -357,17 +367,42 @@ function bissexto() {
     }
 }
 
+document.getElementById("lista4_ex3").addEventListener("click", bissexto);
+
 
 function cotacao() {
-    let escolha = prompt("Informe uma moeda (Dólar(1), Euro(2), Won sul-coreano(3) e Iene(4)");
-    let valor = parseFloat(prompt("Informe um valor:"));
-    let valorTaxa = prompt("Informe a taxa:");
-    let resultado;
+    let moedas = {
+        "1": "Dólar",
+        "2": "Euro",
+        "3": "Won sul-coreano",
+        "4": "Iene"
+    };
 
-    switch (escolha) {
-        case 1:
+    let escolha = prompt("Informe uma moeda:\nDólar (1)\nEuro (2)\nWon sul-coreano (3)\nIene (4)");
+
+    if (!moedas[escolha]) {
+        alert("Opção inválida.");
+        return;
     }
+
+    let valor = parseFloat(prompt("Informe um valor em reais (R$):"));
+    if (isNaN(valor)) {
+        alert("Valor inválido.");
+        return;
+    }
+
+    let taxa = parseFloat(prompt(`Informe a taxa de câmbio para ${moedas[escolha]}:`));
+    if (isNaN(taxa) || taxa <= 0) {
+        alert("Taxa inválida.");
+        return;
+    }
+
+    let resultado = valor / taxa;
+
+    alert(`R$${valor.toFixed(2)} equivalem a ${resultado.toFixed(2)} ${moedas[escolha]}`);
 }
+
+document.getElementById("lista4_ex4").addEventListener("click", cotacao);
 
 
 function tabuada() {
@@ -387,6 +422,7 @@ document.getElementById("lista5_ex1").addEventListener("click", tabuada);
 
 function jokenpo() {
     let escolhapc = "pedra";
+    let ganhou = false;
 
     for (let i = 0; i < 3; i++) {
         let escolhauser = String(prompt("escolha entre: (pedra / papel / tesoura)").toLowerCase());
@@ -395,6 +431,8 @@ function jokenpo() {
             alert("Empate");
         } else if (escolhauser === "papel") {
             alert("Vitoria!");
+            ganhou = true;
+            break;
         } else if (escolhauser === "tesoura") {
             alert("Perdeu :(");
         } else {
@@ -431,3 +469,28 @@ function verFatorial() {
 }
 
 document.getElementById("lista5_ex3").addEventListener("click", verFatorial);
+
+
+function jogo() {
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    let ganhou = false;
+
+    for (let tentativas = 0; tentativas < 3; tentativas++) {
+        let chute = Number(prompt("Chute um número:"));
+        if (chute === randomNumber) {
+            alert("Você ganhou!");
+            ganhou = true;
+            break;
+        } else {
+            alert("Você errou!");
+        }
+    }
+
+    if (!ganhou) {
+        alert(`Acabou! O número era ${randomNumber}.`);
+    }
+}
+
+document.getElementById("lista5_ex4").addEventListener("click", jogo);
+
+

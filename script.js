@@ -285,6 +285,91 @@ function checkTemperatura() {
 document.getElementById("lista3_ex5").addEventListener("click", checkTemperatura);
 
 
+function notaMediaPar() {
+    let n1 = Number(prompt("Informe a primeira nota:"));
+    let n2 = Number(prompt("Informe a segunda nota:"));
+
+    if (isNaN(n1) || isNaN(n2)) {
+        alert("Por favor, informe número válido!");
+    }
+
+    let media = (n1 + n2) / 2;
+
+    if (media >= 5) {
+        alert("Acima da média");
+    } else {
+        alert("Abaixo da média");
+    }
+
+
+    if (media % 2 === 0) {
+        alert("A média é par");
+    }
+}
+
+document.getElementById("lista4_ex1").addEventListener("click", notaMediaPar);
+
+
+function imc() {
+    let peso = parseFloat(prompt("Informe o seu peso:"));
+    let altura = parseFloat(prompt("Informe a sua altura:"));
+
+    if (isNaN(n1) || isNaN(n2)) {
+        alert("Por favor, informe número válido!");
+    }
+
+    let imc = peso / (altura + altura);
+
+    if (imc < 16) {
+        alert("Magreza Grave");
+    } else if (imc >= 16 && imc < 17) {
+        alert("Magreza Moderada");
+    } else if (imc >= 17 && imc < 18.5) {
+        alert("Magreza Leve");
+    } else if (imc >= 18.5 && imc < 25) {
+        alert("Saudável");
+    } else if (imc >= 25 && imc < 30) {
+        alert("Sobrepeso");
+    } else if (imc >= 30 && imc < 35) {
+        alert("Obesidade Grau |");
+    } else if (imc >= 35 && imc < 40) {
+        alert("Obesidade Grau ||");
+    } else {
+        alert("Obesidade Grau |||");
+    }
+}
+
+
+function bissexto() {
+    let ano = Number(prompt("Informe um ano:"));
+
+    if (isNaN(ano)) {
+        alert("Por favor, Informe uma ano.");
+    }
+
+
+    if (ano % 400 === 0) {
+        alert("Ano é bissexto.");
+    } else if (ano % 4 === 0 && ano % 100 !== 0) {
+        alert("Ano é bissexto.")
+    } else {
+        alert("Ano não é bissexto.")
+    }
+}
+
+
+function cotacao() {
+    let escolha = prompt("Informe uma moeda (Dólar(1), Euro(2), Won sul-coreano(3) e Iene(4)");
+    let valor = parseFloat(prompt("Informe um valor:"));
+    let valorTaxa = prompt("Informe a taxa:");
+    let resultado;
+
+    switch (escolha) {
+        case 1:
+    }
+}
+
+
 function tabuada() {
     let n = Number(prompt("Informe um número de 1 a 9: "));
 
@@ -297,7 +382,7 @@ function tabuada() {
     }
 }
 
-document.getElementById("lista4_ex1").addEventListener("click", tabuada);
+document.getElementById("lista5_ex1").addEventListener("click", tabuada);
 
 
 function jokenpo() {
@@ -320,7 +405,7 @@ function jokenpo() {
     alert("Acabou as tentativas!");
 }
 
-document.getElementById("lista4_ex2").addEventListener("click", jokenpo);
+document.getElementById("lista5_ex2").addEventListener("click", jokenpo);
 
 
 function verFatorial() {
@@ -345,4 +430,4 @@ function verFatorial() {
     }
 }
 
-document.getElementById("lista4_ex3").addEventListener("click", verFatorial);
+document.getElementById("lista5_ex3").addEventListener("click", verFatorial);

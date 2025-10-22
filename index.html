@@ -36,7 +36,7 @@
         </section>
 
         <section id="exercicios" class="container">
-            <h2>Comandos básicos</h2>
+            <h2>Comandos Básicos</h2>
             <div class="grid-container">
                 <article class="grid-item" id="lista1_ex1">Crie um script que pergunte o nome do usuário, e depois exiba
                     uma mensagem na tela "Olá, {nome do usuário}".</article>
@@ -53,7 +53,7 @@
         </section>
 
         <section class="container">
-            <h2>Operadores aritméticos</h2>
+            <h2>Operadores Aritméticos</h2>
             <div class="grid-container">
                 <article class="grid-item" id="lista2_ex1">Crie um script que peça ao usuário para inserir dois números.
                     Calcule e exiba o resultado das
@@ -91,7 +91,7 @@
         </section>
 
         <section class="container">
-            <h2>Condicionais</h2>
+            <h2>Operadores Lógicos</h2>
             <div class="grid-container">
                 <article class="grid-item" id="lista3_ex1">Crie um script que peça a idade e exiba se a pessoa é maior
                     de idade ou não.
@@ -116,7 +116,7 @@
         </section>
 
         <section class="container">
-            <h2>Exercícios de fixação</h2>
+            <h2>Exercícios de Fixação</h2>
             <div class="grid-container">
                 <article class="grid-item" id="lista4_ex1">Crie um script que peça 2 notas e informe se está acima da
                     média, e se a média é par, e mostre o resultado ao usuário.
@@ -135,7 +135,7 @@
         </section>
 
         <section class="container">
-            <h2>Laços de repetição</h2>
+            <h2>Laços de Repetição</h2>
             <div class="grid-container">
                 <article class="grid-item" id="lista5_ex1">Crie um script que peça para o usuário informar um número de
                     1 a 9, mostrar a tabuada do número escolhido do 0 ao 10.
@@ -155,9 +155,132 @@
         </section>
 
         <section class="container">
-            <h2>Lista 6</h2>
+            <h2>Funções</h2>
             <div class="grid-container">
                 <article class="grid-item" id="lista6_ex1">Crie um script de calculadora com Function Arrows.</article>
+
+                <article class="grid-item" id="lista6_ex2">Pedir uma idade e dizer se a pessoa pode tirar carteira de
+                    motorista.</article>
+
+                <article class="grid-item" id="lista6_ex3">Criar um programa que peça três números e exiba-os em ordem
+                    crescente.</article>
+
+                <article class="grid-item" id="lista6_ex4">Criar um programa que converta horas para minutos.</article>
+
+                <article class="grid-item" id="lista6_ex5">Criar um programa que peça um valor e exiba quantas cédulas
+                    de R$200, R$100, R$50, R$20, R$10, R$5 e R$1 seriam necessárias para formar esse valor.</article>
+
+                <article class="grid-item" id="lista6_ex6">Criar um programa que peça um número e exiba sua raiz
+                    quadrada.</article>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2>Desafio</h2>
+            <div class="grid-container">
+                <article class="grid-item" id="lista7_ex1">Cálculo do IMC: Crie uma função chamada calcular_imc que
+                    recebe a altura e o peso de uma pessoa como parâmetros e retorna o Índice de Massa Corporal (IMC) da
+                    pessoa. imc = peso / ( altura * altura)</article>
+
+                <article class="grid-item" id="lista7_ex2">Cálculo do Raio de um Círculo: Crie uma função chamada
+                    raio_circulo que recebe a área de um círculo como parâmetro e retorna o raio desse círculo. Para
+                    calcular a área do círculo. </article>
+
+                <article class="grid-item" id="lista7_ex3">Cálculo do Volume de um Cilindro: Crie uma função chamada
+                    volume_cilindro que recebe o raio da base e a altura de um cilindro como parâmetros e retorna o
+                    volume do cilindro. ○ Para calcular o volume do cilindro. pi * ( raio + raio) * altura</article>
+
+                <article class="grid-item" id="lista7_ex4">Cálculo da Área de um Quadrado: Crie uma função chamada
+                    area_quadrado que recebe o lado de um quadrado como parâmetro e retorna a área do quadrado. ○ Para
+                    calcular a área do quadrado. area = lado * lado</article>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2>Banco e Formulário de Cadastro</h2>
+            <div class="grid-container">
+                <article class="grid-item" id="simular_banco">Crie uma função chamada simular_banco que simula um
+                    sistema
+                    bancário simples. A função deve permitir que o usuário faça operações como:
+
+                    Criar uma nova conta (com nome, saldo inicial)
+
+                    Depositar dinheiro em uma conta existente
+
+                    Sacar dinheiro de uma conta existente
+
+                    Exibir o saldo de uma conta
+
+                    Sair do sistema </article>
+
+                <article class="grid-item" id="validarCadastro">
+                    <form id="formCadastro">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" placeholder="Digite seu endereço">
+
+                        <label>Sexo:</label>
+                        <div class="sexo">
+                            <label><input type="radio" name="sexo" value="Masculino">Masculino</label>
+                            <label><input type="radio" name="sexo" value="Feminino">Feminino</label>
+                            <label><input type="radio" name="sexo" value="Outros">Outros</label>
+                        </div>
+
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" placeholder="(00) 0000-0000">
+
+                        <label for="celular">Celular:</label>
+                        <input type="text" id="celular" placeholder="(00) 00000-0000">
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="seuemail@exemplo.com">
+
+                        <button type="button" id="btnEnviar">Enviar</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2>Arrow Function</h2>
+            <div class="grid-container">
+                <article class="grid-item" id="lista9_ex1">Calcular Imposto de Renda (Faixas): Calcule o imposto de
+                    renda com base em faixas salariais com arrow function.</article>
+
+                <article class="grid-item" id="lista9_ex2">Calcular INSS: Calcule o valor do INSS (contribuição para a
+                    previdência social) com base em uma alíquota e um salário arrow function.</article>
+
+                <article class="grid-item" id="lista9_ex3"> Calcular Juros Compostos: Calcule o valor dos juros
+                    compostos sobre um capital inicial.</article>
+
+                <article class="grid-item" id="lista9_ex4">Simular Financiamento: Calcule o valor das parcelas de um
+                    financiamento (use uma fórmula
+                    simplificada).</article>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2>Arrays</h2>
+            <div class="grid-container">
+                <article class="grid-item" id="lista10_ex1">Desenvolva um programa que a partir de um vetor de inteiros
+                    com 5 valores inicializados na declaração apresente o dobro de cada valor armazenado.</article>
+
+                <article class="grid-item" id="lista10_ex2">Desenvolva um programa que a partir de um vetor de inteiros
+                    com 8 valores inicializados na declaração apresente a média aritméticas desses valores</article>
+
+                <article class="grid-item" id="lista10_ex3">Desenvolva um programa que leia a idade de 20 pessoas e
+                    apresente as idades acima da média.</article>
+
+                <article class="grid-item" id="lista10_ex4">Desenvolva um programa que leia 10 números e apresente os
+                    valores pares. Caso não tenha nenhum número par apresente a mensagem “Todos os números são ímpares.”
+                </article>
+
+                <article class="grid-item" id="lista10_ex5">Desenvolva um programa que a partir de um vetor de Strings
+                    com 10 nomes inicializados na declaração leia um novo nome e verifique se ele está armazenado no
+                    vetor, se estiver, apresenta a posição (índice) onde ele está, caso contrário, apresente a mensagem
+                    “Nome não encontrado!”</article>
             </div>
         </section>
 
